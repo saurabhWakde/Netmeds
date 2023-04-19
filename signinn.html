@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+    <title>log in</title>
+   <link rel="stylesheet" href="signinn.css">
+</head>
+<body>
+    <div id="parent">
+        <div>
+            <img src="https://www.netmeds.com/images/cms/wysiwyg/cms/1680000865_New_Dest_deal.png" alt="netmeds images">
+        </div>
+        <div>
+            <h3>Sign In / Sign Up</h3>
+            <p>Sign up or Sign in to access your orders, special offers, health tips and more!</p>
+            <div>
+                <label for="">PHONE NUMBER</label>
+            </div>
+            <form action="">
+                <div>
+                <span>+91  |</span>
+                <input type="tel"; maxlength="10"; placeholder="Enter your mobile no"; minlength="10">
+                </div>
+               <div class="otp-box">
+                <div class="otp-inputs">
+                  <input type="text" maxlength="1" pattern="[0-9]" />
+                  <input type="text" maxlength="1" pattern="[0-9]" />
+                  <input type="text" maxlength="1" pattern="[0-9]" />
+                  <input type="text" maxlength="1" pattern="[0-9]" />
+                  <input type="text" maxlength="1" pattern="[0-9]" /> 
+                  <input type="text" maxlength="1" pattern="[0-9]" />
+        
+                </div>
+                
+              </div> 
+                <div id="verifybox">
+                    <button type="submit">VERIFY</button>
+                </div>
+                
+            </form>
+            <div id="google">
+                <div class="google_link">
+                    <a href="https://www.google.com" class="google-link">
+                        <i class="fa-brands fa-google fa-bounce" style="color: #e31616;"></i>
+                        <span class="google-text">Google</span>
+                      </a>
+                </div>
+                <div>
+                    <div class="facebook-link-box">
+                        <a href="https://www.facebook.com/" target="_blank">
+                          <i class="fab fa-facebook-f"></i>
+                          Facebook
+                        </a>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    const otpInputs = document.querySelectorAll('.otp-inputs input');
+    
+    otpInputs.forEach((input, index) => {
+      input.addEventListener('input', (event) => {
+        if (event.target.value && index < otpInputs.length - 1) {
+          otpInputs[index + 1].focus();
+        } else if (!event.target.value && index > 0) {
+          otpInputs[index - 1].focus();
+        }
+      });
+    });
+    
+    
+    </script>
+</html>
