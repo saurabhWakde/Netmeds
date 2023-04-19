@@ -6,6 +6,13 @@
    gap:50px;
    height:10vh;
 }
+#navhead
+{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;;
+}
 #navbar > img{
     cursor: pointer;
     outline: none;
@@ -43,14 +50,6 @@ a:hover{
     color: white;
     border: none;
 }
-
-
-  
-  
-  
-  
-  
-
   
 #navbar>div>p{
     color:#FFFFFF;
@@ -202,3 +201,194 @@ outline: none;
 #radio4:checked ~.first{
     margin-left: -60%;
 }
+#imageItems{
+    display: flex;
+    justify-content:space-between;
+    margin: auto;
+    width: 90%;
+}
+#imageItems>div{
+    display: flex;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ align-items: center;
+    width:32%;
+    height: 10vh;
+    gap:20px;
+    margin-top: 25px;
+    text-align: center;
+    border-radius:3px;
+    cursor: pointer;
+}
+#imageItems>div>img{
+    padding: 10px;
+   width: 15%;
+}
+#imageItems>div>div>p{
+    color:#87ca4c
+}
+#imageItems>div>.fa{
+    display: flex;
+    color:#2874F0;
+     margin-left:35%
+}
+#imageItems>div>.fa:hover{
+   
+    color: #32AEB1;
+}
+#Payment{
+    margin-top: 10px;;
+    width:90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: none;
+}
+#Payment>a{
+    margin-top: 50px;
+    color: crimson;
+}
+#Payment >div{
+    display: flex;
+}
+#Paytm{
+    display: flex;
+    justify-content:space-between;
+    margin: auto;
+    width: 90%;
+}
+#Paytm>div{
+    display: flex;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width:32.5%;
+    height: 10vh;
+    gap:20px;
+    margin-top: 25px;
+    border-radius:3px;
+    cursor: pointer;
+}
+#Paytm>div>img{
+    padding: 10px;
+   width: 15%;
+}
+#Paytm>div>div>h3{
+    font-size: 12px;
+      
+}
+#Paytm>div>div>p{
+    font-size:11px;
+      
+}
+
+
+input[type="Tradio"] {
+  display: none;
+}
+
+.Tmanual-btn {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.Tmanual-btn:hover {
+  background-color: #555;
+}
+.Trend{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    /* margin:auto; */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    margin-top:20px;;
+    justify-content: space-evenly;
+}
+.Tslider{
+    margin: auto;
+    position: relative;
+    width:90%;
+    height: 280px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+overflow: hidden;
+cursor: pointer;
+outline: none;
+display: flex;
+justify-content: space-evenly;
+}
+.Tslides{
+    display: flex;
+    gap:1%;
+    width:650vh;
+    height:100vh;
+}
+.Tslider>input{
+    display: none;
+}
+.Tslide{
+    width:20%;
+    transition: 2s;
+}
+.Trend>img{
+    width:100%;
+    background-size: cover;
+}
+.Tnavigation_manual,.Tnavigation_auto{
+    position: absolute;
+    bottom: 0;;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;;
+}
+.Tmanualbtn,.Tnavigation_auto div{
+    border: 2px solid#2874F0;;
+    padding: 5px;;
+    border-radius: 50%;
+    transition: 1s;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+.Tmanualbtn:not(:last-child),.Tnavigation_auto div:not(:last-child)
+{
+    margin-right:10px ;
+}
+.Tmanualbtn:hover,.Tnavigation_auto div:hover{
+    background-color: #32AEB1;
+}
+#Tradio1.checked ~.navigation_auto.autobtn1{
+    background-color: #32AEB1;
+}
+#Tradio2.checked ~.navigation_auto.autobtn2{
+    background-color: #32AEB1;
+}
+#Tradio3.checked ~.navigation_auto.autobtn3{
+    background-color: #32AEB1;
+}
+#Tradio4.checked ~.navigation_auto.autobtn4{
+    background-color: #32AEB1;
+}
+#Tradio1:checked ~.first{
+    margin-left: 0;
+}
+#Tradio2:checked ~.first{
+    margin-left: -20%;
+}
+#Tradio3:checked ~.first{
+    margin-left: -40%;
+}
+#Tradio4:checked ~.first{
+    margin-left: -60%;
+}
+
+
+
+
