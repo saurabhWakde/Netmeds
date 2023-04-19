@@ -279,116 +279,112 @@ outline: none;
       
 }
 
-
 input[type="Tradio"] {
-  display: none;
-}
-
-.Tmanual-btn {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 10px;
-  border-radius: 50%;
-  background-color: #ccc;
-  cursor: pointer;
-}
-
-.Tmanual-btn:hover {
-  background-color: #555;
-}
-.Trend{
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    /* margin:auto; */
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:100%;
-    margin-top:20px;;
-    justify-content: space-evenly;
-}
-.Tslider{
-    margin: auto;
-    position: relative;
-    width:90%;
-    height: 280px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-overflow: hidden;
-cursor: pointer;
-outline: none;
-display: flex;
-justify-content: space-evenly;
-}
-.Tslides{
-    display: flex;
-    gap:1%;
-    width:650vh;
-    height:100vh;
-}
-.Tslider>input{
     display: none;
-}
-.Tslide{
-    width:20%;
-    transition: 2s;
-}
-.Trend>img{
-    width:100%;
-    background-size: cover;
-}
-.Tnavigation_manual,.Tnavigation_auto{
-    position: absolute;
-    bottom: 0;;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;;
-}
-.Tmanualbtn,.Tnavigation_auto div{
-    border: 2px solid#2874F0;;
-    padding: 5px;;
+  }
+  
+  .Tmanual-btn {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 10px;
     border-radius: 50%;
-    transition: 1s;
+    background-color: #ccc;
     cursor: pointer;
-    outline: none;
-    user-select: none;
-}
-.Tmanualbtn:not(:last-child),.Tnavigation_auto div:not(:last-child)
-{
-    margin-right:10px ;
-}
-.Tmanualbtn:hover,.Tnavigation_auto div:hover{
-    background-color: #32AEB1;
-}
-#Tradio1.checked ~.navigation_auto.autobtn1{
-    background-color: #32AEB1;
-}
-#Tradio2.checked ~.navigation_auto.autobtn2{
-    background-color: #32AEB1;
-}
-#Tradio3.checked ~.navigation_auto.autobtn3{
-    background-color: #32AEB1;
-}
-#Tradio4.checked ~.navigation_auto.autobtn4{
-    background-color: #32AEB1;
-}
-#Tradio1:checked ~.first{
-    margin-left: 0;
-}
-#Tradio2:checked ~.first{
-    margin-left: -20%;
-}
-#Tradio3:checked ~.first{
-    margin-left: -40%;
-}
-#Tradio4:checked ~.first{
-    margin-left: -60%;
-}
-
-
-
-
+  }
+  
+  .Tmanual-btn:hover {
+    background-color: #555;
+  }
+  .Trend{
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      /* margin:auto; */
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width:100%;
+      margin-top:20px;;
+      justify-content: space-evenly;
+  }
+  .Tslider{
+      margin: auto;
+      position: relative;
+      width:90%;
+      height: 280px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: space-evenly;
+  }
+  .Tslides{
+      display: flex;
+      gap:1%;
+      width:650vh;
+      height:100vh;
+  }
+  .Tslider>input{
+      display: none;
+  }
+  .Tslide{
+      width:20%;
+      transition: 2s;
+  }
+  .Trend>img{
+      width:100%;
+      background-size: cover;
+  }
+  .Tnavigation_manual,.Tnavigation_auto{
+      position: absolute;
+      bottom: 0;;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;;
+  }
+  .Tmanualbtn,.Tnavigation_auto div{
+      border: 2px solid#2874F0;;
+      padding: 5px;;
+      border-radius: 50%;
+      transition: 1s;
+      cursor: pointer;
+      outline: none;
+      user-select: none;
+  }
+  .Tmanualbtn:not(:last-child),.Tnavigation_auto div:not(:last-child)
+  {
+      margin-right:10px ;
+  }
+  .Tmanualbtn:hover,.Tnavigation_auto div:hover{
+      background-color: #32AEB1;
+  }
+  #Tradio1.checked ~.navigation_auto.autobtn1{
+      background-color: #32AEB1;
+  }
+  #Tradio2.checked ~.navigation_auto.autobtn2{
+      background-color: #32AEB1;
+  }
+  #Tradio3.checked ~.navigation_auto.autobtn3{
+      background-color: #32AEB1;
+  }
+  #Tradio4.checked ~.navigation_auto.autobtn4{
+      background-color: #32AEB1;
+  }
+  #Tradio1:checked ~.first{
+      margin-left: 0;
+  }
+  #Tradio2:checked ~.first{
+      margin-left: -20%;
+  }
+  #Tradio3:checked ~.first{
+      margin-left: -40%;
+  }
+  #Tradio4:checked ~.first{
+      margin-left: -60%;
+  }
+  
