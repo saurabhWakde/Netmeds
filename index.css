@@ -323,9 +323,9 @@ input[type="Tradio"] {
   }
   .Tslides{
       display: flex;
-      gap:1%;
+      gap:15px;
       width:650vh;
-      height:100vh;
+      height:100vh;;
   }
   .Tslider>input{
       display: none;
@@ -337,6 +337,7 @@ input[type="Tradio"] {
   .Trend>img{
       width:100%;
       background-size: cover;
+      border-radius: 10px;;
   }
   .Tnavigation_manual,.Tnavigation_auto{
       position: absolute;
