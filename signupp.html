@@ -53,8 +53,8 @@
                 <div>
                     
                            
-                    <button  >
-                       <a href="/Netmeds/signinn.html">USE OTP</a> </button>
+                    <button >
+                       <a id="otp" href="/Netmeds/signinn.html">USE OTP</a> </button>
                 </div>
                 
             </form>
@@ -92,12 +92,15 @@
 </body>
 
 <script>
-    const otpBtn = document.querySelector('#otp > a');
+    const otpBtn = document.querySelector('#otp');
 const phoneInput = document.getElementById('phone');
-
+otpBtn.addEventListener("change",()=>{
+    otpBtn.ariaDisabled=(phoneInput.value.length < phoneInput.getAttribute('maxlength'));
+});
 otpBtn.addEventListener('click', () => {
     if (phoneInput.value.length < phoneInput.getAttribute('maxlength')) {
         alert('Phone number must be at least 10 digits long');
+        event.preventDefault();
     } else {
         alert('OTP will be sent to your phone number');
     }
