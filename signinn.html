@@ -6,8 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">      
     <title>log in</title>
    <link rel="stylesheet" href="signinn.css">
+   <script src="https://kit.fontawesome.com/09ea9ed7f5.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div id="navbar">
+        
+    <img src="https://www.netmeds.com/assets/gloryweb/images/home-logo-netmeds-new.svg" alt="" />
+    <div id="bar">
+        <input type="text" placeholder="Deliver to 11002" name="" id="">
+        <i class="fa-solid fa-angle-down fa-1x" style="color: #6d7583;"></i>
+        <p style="color: #6d7583">|</p>
+        <input  placeholder="Search for medicine and wellness products.." type="text" name="" id="">
+        <button id="search" type="submit"><i class="fa-solid fa-magnifying-glass-plus fa-2x" style="color:#2874F0;"></i></button>
+    </div>
+    
+    <div>
+        <i class="fa-solid fa-receipt fa-2x"></i>
+        <p>Upload</p>
+    </div>
+    
+    <div>
+        <i class="fa-solid fa-cart-shopping fa-2x"></i>
+        <p>Cart</p>
+    </div>
+    
+</div>
     <div id="parent">
         <div>
             <img src="https://www.netmeds.com/images/cms/wysiwyg/cms/1680000865_New_Dest_deal.png" alt="netmeds images">
@@ -15,16 +38,36 @@
         <div>
             <h3>Sign In / Sign Up</h3>
             <p>Sign up or Sign in to access your orders, special offers, health tips and more!</p>
-            <div>
-                <label for="">PHONE NUMBER</label>
+            <div id="userinformation">
+                <label for=""> EMAIL</label>
+                <br>
+                <input type="email" id="email-input" placeholder="Enter your email" />
+                    <br>
+                    <br>
+                <label for="">NAME</label>
+                <br>
+                <input type="text" placeholder="Enter your name" />
+                <br>
+                <br>
+                <label for=""> LAST NAME</label>
+                <br>
+                <input type="text" placeholder="Enter your last name" />
             </div>
-            <form action="">
-                <div>
-                <span>+91  |</span>
-                <input type="tel"; maxlength="10"; placeholder="Enter your mobile no"; minlength="10">
-                </div>
+          <div id="number_show">
+            <h5>
+              VERIFYING NUMBER</h5>
+              <div >
+                <p>We have sent 6 digit OTP on 91+  <b>9802705402</b>  </p>
+                <a href="/Netmeds/signupp.html" >change</a>
+              </div>
+            
+          </div>
+            
+            <form action=""> 
                <div class="otp-box">
+               
                 <div class="otp-inputs">
+                 
                   <input type="text" maxlength="1" pattern="[0-9]" />
                   <input type="text" maxlength="1" pattern="[0-9]" />
                   <input type="text" maxlength="1" pattern="[0-9]" />
@@ -36,43 +79,47 @@
                 
               </div> 
                 <div id="verifybox">
-                    <button type="submit">VERIFY</button>
+                  <button id="verify-btn" type="submit">VERIFY</button>
                 </div>
                 
             </form>
-            <div id="google">
-                <div class="google_link">
-                    <a href="https://www.google.com" class="google-link">
-                        <i class="fa-brands fa-google fa-bounce" style="color: #e31616;"></i>
-                        <span class="google-text">Google</span>
-                      </a>
-                </div>
-                <div>
-                    <div class="facebook-link-box">
-                        <a href="https://www.facebook.com/" target="_blank">
-                          <i class="fab fa-facebook-f"></i>
-                          Facebook
-                        </a>
-                      </div>
-                </div>
-            </div>
+           
         </div>
 
     </div>
 </body>
 <script>
-    const otpInputs = document.querySelectorAll('.otp-inputs input');
-    
-    otpInputs.forEach((input, index) => {
-      input.addEventListener('input', (event) => {
-        if (event.target.value && index < otpInputs.length - 1) {
-          otpInputs[index + 1].focus();
-        } else if (!event.target.value && index > 0) {
-          otpInputs[index - 1].focus();
-        }
-      });
-    });
-    
+   const otpInputs = document.querySelectorAll('.otp-inputs input');
+const verifyBtn = document.querySelector('#verify-btn');
+
+otpInputs.forEach((input, index) => {
+  input.addEventListener('input', (event) => {
+    if (event.target.value && index < otpInputs.length - 1) {
+      otpInputs[index + 1].focus();
+    } else if (!event.target.value && index > 0) {
+      otpInputs[index - 1].focus();
+    }
+  });
+});
+
+const emailInput = document.getElementById('email-input');
+
+emailInput.addEventListener('blur', () => {
+  const email = emailInput.value;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailPattern.test(email)) {
+    alert('Please enter a valid email address');
+  }
+});
+
+verifyBtn.addEventListener('click', () => {
+  const otpValue = Array.from(otpInputs).map(input => input.value).join('');
+  if (otpValue === '') {
+    alert('Please enter the OTP');
+  }
+});
+
     
     </script>
 </html>

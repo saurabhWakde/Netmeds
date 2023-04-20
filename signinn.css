@@ -16,6 +16,8 @@
 {
 padding: 30px 100px 0px 100px!important;;
 }
+
+
 h3{
     padding: 0;
     margin: 0 0 8px;
@@ -33,6 +35,16 @@ h3{
     margin-bottom: 40px;
     /* letter-spacing: 0.5px; */
 }
+
+#userinformation >input
+{
+    border: none;
+    margin-top: 7px;
+    font-size: larger;
+    opacity: 0.5;
+    font-family: "Google Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 label
 {
     /* font-family: "Google Sans", -apple-system, BlinkMacSystemFont, sans-serif; */
@@ -73,55 +85,52 @@ form > div > input
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 35px;
+    margin-top: 30px;
     border-radius: 5px;
     height: 40px;
 }
-button
+#verify-btn
 {
     background-color: #24aeb1;
     border: none;
     color: aliceblue;
 }
 
-#google
+/* #number
 {
-    display: flex !important;
-    justify-content: space-around;
-    margin-top: 70px;
+    margin-top: 30px;
+} */
+#number_show > div{
+    display: flex;
+    justify-content: space-between;
+}
+#number_show > div > a{
+   color: rgb(223, 113, 113); 
+   padding-top: 12px;
+   text-decoration: none;
 }
 
-.google_link
+#number_show > p 
 {
-        display: inline-block;
-       border: solid 0.3px;
-       border-radius: 3px;
-        padding: 10px;
-        padding: 10px 30px 10px 30px;
-      
+    color: gray;
+    margin-top: 15px;
 }
-.facebook-link-box
+#number_show > h5
 {
-        display: inline-block;
-        border: solid 0.3px;
-        border-radius: 3px;
-        padding: 10px 30px 10px 30px;
+    color: rgb(88, 82, 82);
+    margin-top: 50px;
 }
-.google_link:hover
-{
-    cursor: pointer;
-}
-.facebook-link-box:hover
-{
-    cursor: pointer;
-}
+
+
+
+
 
 .otp-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    /* margin-top: 50px; */
   }
   
   .otp-inputs {
@@ -158,4 +167,67 @@ button
     background-color: #0069d9;
   }
 
-
+  #navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   background-color:#32AEB1 ;
+   gap:50px;
+   height:10vh;
+}
+#navhead
+{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+#navbar > img{
+    cursor: pointer;
+    outline: none;
+}
+#navbar> div{
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center; 
+     align-items: center;
+    gap:5px;
+}
+#navbar>div>p{
+    color:#FFFFFF;
+    cursor: pointer;
+    outline: none;
+}
+#bar{
+    background-color: #FFFFFF;
+    border-radius: 5px;;
+    gap:5px;
+}
+.fa-solid{
+    color:#FFFFFF;
+    cursor: pointer;
+    outline: none;
+}
+#bar>input{
+    border: none;
+    font-size: 10px;
+    font-weight: 400;
+  width:200px;
+}
+#bar>input:nth-child(2){
+    font-weight: 400;
+    color:grey;
+}
+#bar>input:nth-child(1){
+    border: none;
+    font-weight: 400;
+    width: 20%;
+    color:grey;
+}
+#bar > input:focus
+{
+    outline: none;
+}
+#search{
+    border: none;
+}
