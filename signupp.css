@@ -262,3 +262,49 @@ button > a{
 #search{
     border: none;
 }
+#noneatnid
+{
+    display: none;
+}
+@media only screen and (max-width: 575.90px) {
+    #parent
+    {
+        display: inline-block;
+    }
+    #navbar
+    {
+        display: none;
+    }
+}
+@media (min-width: 576px) and (max-width: 850.98px)
+{
+*
+{
+    
+    background-color: #24aeb1;
+    
+}
+
+#noneatnid
+{
+    display: inline-block;
+   width: 50%;
+   margin-left: 25%;
+   margin-top: 30%;
+
+}
+#parent
+{
+    display: none
+}
+#navbar
+{
+    display: none;
+}
+#iconbox{
+    display: none;
+}
+form{
+    display: none;
+}
+}
