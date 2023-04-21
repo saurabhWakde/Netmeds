@@ -87,6 +87,17 @@ setInterval(function()
         temp1=1;
     }
 },2000);
+var temp2=1;
+setInterval(function()
+{
+    document.getElementById('Nradio'+temp2).checked=true;
+    temp2++;
+    if(temp2>4)
+    {
+        temp2=1;
+    }
+},3000);
+console.log(arr.length);
 console.log(arr.length);
 
 // Set the date and time for April 24th, 2023
@@ -127,40 +138,40 @@ arr.map(function(Elem, Index) {
     slides.append(div);
     slider.append(slides);
     document.getElementsByClassName("Tslides")[0].append(slider);
-})
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
-const images = document.querySelector('.carousel').children;
-const totalImages = images.length;
-let index = 0;
+});
+// const prev = document.querySelector('.prev');
+// const next = document.querySelector('.next');
+// const images = document.querySelector('.carousel').children;
+// const totalImages = images.length;
+// let index = 0;
 
-prev.addEventListener('click', () => {
-  nextImage('next');
-})
+// prev.addEventListener('click', () => {
+//   nextImage('next');
+// })
 
-next.addEventListener('click', () => {
-  nextImage('prev');
-})
+// next.addEventListener('click', () => {
+//   nextImage('prev');
+// })
 
-function nextImage(direction) {
-  if(direction == 'next') {
-    index++;
-    if(index == totalImages) {
-      index = 0;
-    }
-  } else {
-    if(index == 0) {
-      index = totalImages - 1;
-    } else {
-      index--;
-    }
-  }
+// function nextImage(direction) {
+//   if(direction == 'next') {
+//     index++;
+//     if(index == totalImages) {
+//       index = 0;
+//     }
+//   } else {
+//     if(index == 0) {
+//       index = totalImages - 1;
+//     } else {
+//       index--;
+//     }
+//   }
 
-  for(let i = 0; i < images.length; i++) {
-    images[i].classList.remove('main');
-  }
-  images[index].classList.add('main');
-}
+//   for(let i = 0; i < images.length; i++) {
+//     images[i].classList.remove('main');
+//   }
+//   images[index].classList.add('main');
+// }
 const Cslider = document.querySelector('.Cslider');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
@@ -182,3 +193,189 @@ nextBtn.addEventListener('click', () => {
   }
   Cslider.style.transform = `translateX(-${CslideIndex * CslideWidth}px)`;
 });
+//Homeopathy
+
+
+
+// slider sup
+const Supslider = document.querySelector('.Supslider');
+const SupprevBtn = document.querySelector('.Supprev-btn');
+const SupnextBtn = document.querySelector('.Supnext-btn');
+const SupslideWidth = document.querySelector('.Supslide').clientWidth;
+let SupslideIndex = 0;
+
+SupprevBtn.addEventListener('click', () => {
+  SupslideIndex--;
+  if (SupslideIndex < 0) {
+    SupslideIndex = Supslider.children.length - 1;
+  }
+  Supslider.style.transform = `translateX(-${SupslideIndex * SupslideWidth}px)`;
+});
+
+SupnextBtn.addEventListener('click', () => {
+  SupslideIndex++;
+  if (SupslideIndex >= Supslider.children.length) {
+    SupslideIndex = 0;
+  }
+  Supslider.style.transform = `translateX(-${SupslideIndex * SupslideWidth}px)`;
+});
+
+
+
+
+const Hslider = document.querySelector('.Hslider');
+const HprevBtn = document.querySelector('.Hprev-btn');
+const HnextBtn = document.querySelector('.Hnext-btn');
+const HslideWidth = document.querySelector('.Hslide').clientWidth;
+let HslideIndex = 0;
+
+HprevBtn.addEventListener('click', () => {
+  HslideIndex--;
+  if (HslideIndex < 0) {
+    HslideIndex = Hslider.children.length - 1;
+  }
+  Hslider.style.transform = `translateX(-${HslideIndex*HslideWidth}px)`;
+});
+
+HnextBtn.addEventListener('click', () => {
+  HslideIndex++;
+  if (HslideIndex >= Hslider.children.length) {
+    HslideIndex = 0;
+  }
+  Hslider.style.transform = `translateX(-${HslideIndex * HslideWidth}px)`;
+});
+//bestseller
+const Bestslider = document.querySelector('.Bestslider');
+const BestprevBtn = document.querySelector('.Bestprev-btn');
+const BestnextBtn = document.querySelector('.Bestnext-btn');
+const BestslideWidth = document.querySelector('.Bestslide').clientWidth;
+let BestslideIndex = 0;
+
+BestprevBtn.addEventListener('click', () => {
+  BestslideIndex--;
+  if (BestslideIndex < 0) {
+    BestslideIndex = Bestslider.children.length - 1;
+  }
+  Bestslider.style.transform = `translateX(-${BestslideIndex*BestslideWidth}px)`;
+});
+
+BestnextBtn.addEventListener('click', () => {
+  BestslideIndex++;
+  if (BestslideIndex >= Bestslider.children.length) {
+    BestslideIndex = 0;
+  }
+  Bestslider.style.transform = `translateX(-${BestslideIndex * BestslideWidth}px)`;
+});
+/////Brand in focus slider
+const Brandslider = document.querySelector('.Brandslider');
+const BrandprevBtn = document.querySelector('.Brandprev-btn');
+const BrandnextBtn = document.querySelector('.Brandnext-btn');
+const BrandslideWidth = document.querySelector('.Brandslide').clientWidth;
+let BrandslideIndex = 0;
+
+BrandprevBtn.addEventListener('click', () => {
+  BrandslideIndex--;
+  if (BrandslideIndex < 0) {
+    BrandslideIndex = Brandslider.children.length - 1;
+  }
+  Brandslider.style.transform = `translateX(-${BrandslideIndex*BrandslideWidth}px)`;
+});
+
+BrandnextBtn.addEventListener('click', () => {
+  BrandslideIndex++;
+  if (BrandslideIndex >= Brandslider.children.length) {
+    BrandslideIndex = 0;
+  }
+  Brandslider.style.transform = `translateX(-${BrandslideIndex * BrandslideWidth}px)`;
+});
+
+
+var Productarr=[{
+  image_url:"https://www.netmeds.com/images/product-v1/150x150/357753/d_protin_chocolate_powder_500_gm_0.jpg",
+  ProductName:"Dabur",
+  Price:599,
+  MRP:800,
+  OFF:"60%off"
+}]
+// Productarr.map(function(Elem,Index)
+// {
+//   var Supimg=document.createElement("img");
+//   Supimg.setAttribute("src",Elem.image_url);
+//   var Name=document.createElement('a');
+//   Name.textContent=Elem.ProductName;
+//   var price=document.createElement('p');
+//   price.textContent=Elme.Price;
+//   var Mrp=document.createElement("span");
+//   Mrp.textContent=Elem.MRP;
+//   var Off=document.createElement("h1");
+//   Off.textContent=Elem.OFF;
+//   var Button=document.createElement("button");
+//   Button.textContent="Add To ";
+// document.getElementsByClassName("Supproduct")[0].append(Supimg,Name,price,Mrp,Off,Button);
+// })
+
+// Productarr.forEach(function(Elem, Index) {
+//   var Supimg = document.createElement("img");
+//   Supimg.setAttribute("src", Elem.image_url);
+
+//   var Name = document.createElement('a');
+//   Name.textContent = Elem.ProductName;
+
+//   var price = document.createElement('p');
+//   price.style.display = "inline-block";
+//   price.textContent = "₹" + Elem.Price;
+  
+//   var Mrp = document.createElement("span");
+//   Mrp.style.display = "inline-block";
+//   Mrp.textContent ="₹"+Elem.MRP;
+  
+//   price.appendChild(Mrp);
+  
+
+//   var Off = document.createElement("h1");
+//   Off.textContent ="₹"+Elem.OFF;
+
+//   var Button = document.createElement("button");
+//   Button.textContent = "Add To Cart";
+
+//   var container = document.getElementsByClassName("Supproduct")[0];
+//   container.appendChild(Supimg);
+//   container.appendChild(Name);
+//   container.appendChild(price);
+//   container.appendChild(Mrp);
+//   container.appendChild(Off);
+//   container.appendChild(Button);
+// });
+// Productarr.forEach(function(Elem, Index) {
+//   var Supimg = document.createElement("img");
+//   Supimg.setAttribute("src", Elem.image_url);
+
+//   var Name = document.createElement('a');
+//   Name.textContent = Elem.ProductName;
+
+//   var price = document.createElement('p');
+//   price.style.display = "inline-block";
+//   price.textContent = "₹" + Elem.Price;
+  
+//   var Mrp = document.createElement("span");
+//   Mrp.style.display = "inline-block";
+//   Mrp.textContent ="₹"+Elem.MRP;
+  
+//   price.appendChild(Mrp);
+
+//   var Off = document.createElement("h1");
+//   Off.textContent = Elem.OFF + " off";
+
+//   var Button = document.createElement("button");
+//   Button.textContent = "Add To Cart";
+
+//   var container = document.getElementsByClassName("Supproduct")[0];
+//   container.appendChild(Supimg);
+//   container.appendChild(Name);
+//   container.appendChild(price);
+//   container.appendChild(Off);
+//   container.appendChild(Button);
+// });
+
+
+
