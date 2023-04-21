@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
         <title>HomePage</title>
         <script src="https://kit.fontawesome.com/faa1e7614d.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="product.css" />
+        <link rel="stylesheet" href="index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -33,7 +33,7 @@
           <p><i class="fa fa-upload"></i>Upload Rx</p>
           <p> <a href="cart.html" target="_blank">
             <i class="fa-solid fa-cart-plus "style="color:white;font-size:30px"></i>
-          </a> Cart</p>
+          </a> </p>
           <p>
             <i class="fa fa-user-circle"></i>
             <span onclick="window.location.href='signup.html'">Sign In</span> /
@@ -84,14 +84,24 @@
       </nav>
       <div id="cart"></div>
       <div id="container"></div>
-
-
- 
+</div>
+<div id="filter">
+<select id="sortname"  onchange="filterdata()">
+    <option value="">Sort by Name</option>
+    <option value="ascending">Ascending </option>
+    <option value="descending">Descending</option>
+    </select>
+    <select id="SortSalary"  onchange="filterdata()">
+      <option value="">Sort by price</option>
+      <option value="htl">high to low</option> </option>
+      <option value="lth">low to high</option>
+    </select>
 </div>
 <div id="parent"></div>
  </body>
 </html>
 <script>
+ 
  var mensData = [
  {
       image_url:
@@ -206,6 +216,33 @@
       MRP: 105,
     },
     ];
+  //   localStorage.setItem("product",JSON.stringify(data))
+  //  var data=JSON.parse(localStorage.getItem("product"))||[];
+  function filterdata(){
+    var set=document.getElementById("sortname").value
+    console.log(set);
+    if(set==="descending"){
+      mensData.sort(function(a,b){
+        if(a.name>b.name) return 1;
+        if(a.name<b.name) return -1;
+        return 0;
+        //return a.name-b.name
+      });
+      displaydata(mensData)
+    }
+    if(set==="ascending"){
+      mensData.sort(function(a,b){
+        if(a.name<b.name) return 1;
+        if(a.name>b.name) return -1;
+        return 0;
+        //return b.name-a.name 
+   });
+   displaydata(mensData)
+  }
+}
+displaydata(mensData);
+function displaydata(data){
+  document.getElementById("parent").innerHTML="";
 mensData.map(function(elem){
 var div=document.createElement("div");
 var image=document.createElement("img");
@@ -231,14 +268,46 @@ btn.textContent="Add to cart";
 btn.addEventListener("click",function(){
   addcart(elem);
 });
-
 div.append(image,name,pricebox,btn);
 document.getElementById("parent").append(div);
 });
-var cartarr=JSON.parse(localStorage.getItem("CART"))||[];
-function addcart(elem){
- console.log(elem); 
- cartarr.push(elem)
- localStorage.setItem("CART",JSON.stringify(cartarr));
 }
+
+
+//data.push(mensData)
+//console.log(data)
+
+
+
+
+// var cartarr=JSON.parse(localStorage.getItem("CART"))||[];
+// function addcart(elem){
+//  console.log(elem); 
+//  cartarr.push(elem)
+//  localStorage.setItem("CART",JSON.stringify(cartarr));
+// }
+
+//data=JSON.parse(localStorage.getItem("product"))||[];
+//displaydata(data);
+
+// function filterdata(){
+//     var set=document.getElementById("sortname").value
+//     console.log(set);
+//     if(set==="descending"){
+//       mensData.sort(function(a,b){
+//         // if(a.name>b.name) return 1;
+//         // if(a.name<b.name) return -1;
+//         // return 0;
+//         return a.name-b.name
+//       });
+//       displaydata(mensData)
+//     }
+//     if(set==="ascending"){
+//       mensData.sort(function(a,b){
+//         return b.name-a.name 
+//    });
+//    displaydata(mensData)
+//   }
+ 
+
 </script>

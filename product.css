@@ -33,7 +33,7 @@
     button{
       width:80%;
       border: none;
-      background-color: rgba(47, 255, 220, 0.801);
+      background-color:#24aeb1;;
      color: white;
      padding:10px 0;
      margin-bottom: 20px;
@@ -71,7 +71,7 @@
       }
       .nav {
         width: 89.5%;
-        background-color: rgb(50, 174, 177);
+        background-color: #24aeb1;;
         display: flex;
         padding: 35px 80px;
       }
@@ -126,7 +126,7 @@
       }
       /* 2nd nav section start */
       .nav-section-2 {
-        background-color: rgb(50, 174, 177);
+        background-color: #24aeb1;;
         justify-content: space-around;
         padding: 0px 150px 15px;
         color: #fff;
