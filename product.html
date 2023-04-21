@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>HomePage</title>
+        <script src="https://kit.fontawesome.com/faa1e7614d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+</head>
+ <body>
+    <nav class="nav">
+        <div class="nav1 center">
+          <img
+            src="https://www.netmeds.com/assets/gloryweb/images/home-logo-netmeds-new.svg"
+            alt=""
+            onclick="window.location.href='home.html'"
+          />
+        </div>
+        <div class="nav2">
+          <select id="">
+            <option value="">Deliver to <span>110008</span></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+          <input type="search" name="" id="" />
+        </div>
+        <div class="flex nav3">
+          <p><i class="fa fa-upload"></i>Upload Rx</p>
+          <p> <a href="cart.html" target="_blank">
+            <i class="fa-solid fa-cart-plus "style="color:white;font-size:30px"></i>
+          </a> </p>
+          <p>
+            <i class="fa fa-user-circle"></i>
+            <span onclick="window.location.href='signup.html'">Sign In</span> /
+            <span onclick="window.location.href='signup.html'"> Sign up</span>
+          </p>
+        </div>
+      </nav>
+      <nav>
+        <!-- 2nd nav section start-->
+        <section class="flex nav-section-2">
+          <div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1533/1533792.png"
+              alt=""
+            />
+            Medicine
+          </div>
+          <div>
+            <img
+              src="https://www.netmeds.com/assets/gloryweb/images/icons/ordermedicinnew.svg"
+              alt=""
+            />
+            Wellness
+          </div>
+          <div>
+            <img
+              src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/cold-and-fever.jpg?v=1"
+              alt=""
+            />
+            Lab Tests
+          </div>
+          <div>
+            <img
+              src="https://www.netmeds.com/assets/gloryweb/images/icons/new-icons/beauty_products.svg"
+              alt=""
+            />
+            Beauty
+          </div>
+          <div>
+            <img
+              src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/women-s-care.jpg?v=1"
+              alt=""
+            />
+            Health Corner
+          </div>
+        </section>
+        <!-- 2nd nav section end -->
+      </nav>
+      <div id="cart"></div>
+      <div id="container"></div>
+</div>
+<div id="filter">
+<select id="sortname"  onchange="filterdata()">
+    <option value="">Sort by Name</option>
+    <option value="ascending">Ascending </option>
+    <option value="descending">Descending</option>
+    </select>
+    <select id="SortSalary"  onchange="filterdata()">
+      <option value="">Sort by price</option>
+      <option value="htl">high to low</option> </option>
+      <option value="lth">low to high</option>
+    </select>
+</div>
+<div id="parent"></div>
+ </body>
+</html>
+<script>
+ 
+ var mensData = [
+ {
+      image_url:
+       "https://www.netmeds.com/images/product-v1/150x150/15917/dabur_pudin_hara_pearls_capsule_10_s_0.jpg",
+      name: "Dabur Pudin Hara Pearls Capsule 10's",
+      Bestprice: 29,
+      MRP: 30,
+    },
+    {
+      image_url:
+        "https://www.netmeds.com/images/product-v1/150x150/12749/dabur_chyawanprash_awaleha_500_gm_0.jpg ",
+      name: " Dabur Chyawanprsah 500gm ",
+      Bestprice: 218,
+      MRP: 399,
+    },
+    {
+      image_url:
+        "https://www.netmeds.com/images/product-v1/150x150/826061/dr_reckeweg_r89_lipocol_drops_30_ml_0_1.jpg",
+      name: " Dr. Reckeweg R89 Lipocol Drops 30 ml",
+      Bestprice: 310,
+      MRP: 320,
+    },
+    {
+      image_url:
+        "https://www.netmeds.com/images/product-v1/150x150/13523/zandu_balm_25_ml_0.jpg ",
+      name: " Zandu balm 20ml",
+      Bestprice: 80,
+      MRP: 100,
+    },
+    {
+      image_url:
+        "https://www.netmeds.com/images/product-v1/150x150/15580/accu_chek_active_test_strips_50s_0_1.jpg",
+      name: "Accu-Chek Active Test Strips 50's",
+      Bestprice: 899,
+      MRP: 1049,
+    },
+    {
+      image_url:
+        "https://www.netmeds.com/images/product-v1/150x150/857457/accusure_digital_thermometer_mt_1027_0.jpg",
+      name: "AccuSure Digital Thermometer (MT-1027)",
+      Bestprice: 108,
+      MRP: 180,
+    },
+    {
+      image_url:
+        "https://www.netmeds.com/images/product-v1/150x150/382699/onetouch_select_test_strip_10_s_45864_0_5.jpg ",
+      name: "Onetouch Select Test Strip ",
+      Bestprice:395,
+      MRP: 375,
+    },
+    {
+      image_url:
+        "https://www.netmeds.com/images/product-v1/150x150/813592/dr_morepen_gluco_one_blood_glucose_test_strips_50s_bg03_58318_0_1.jpg",
+      name: "ACCU check Aviva Glucose Test Strip  ",
+      Bestprice: 1620,
+      MRP: 3599,
+    },
+    {
+      image_url:
+        "https://www.netmeds.com/images/product-v1/150x150/409485/cofsils_lozenges_orange_10s_0_1.jpg ",
+      name: "Cofsils Lozenges  ",
+      BestPrice:30,
+      MRP: 35,
+    },
+    {
+      image_url:
+        "https://www.netmeds.com/images/product-v1/150x150/100426/2baconil_tts30_21mg_patch_7s_36473_0_2.jpg ",
+      name: "2banovil TTS90 21mg patch",
+      Bestprice:733,
+      MRP: 971,
+    },
+    {
+      image_url:
+        "https://www.netmeds.com/images/product-v1/150x150/896036/digene_tablets_for_acidity_gas_relief_orange_flavour_15s_0_2.jpg",
+      name: "Digene Acidit&Gas Relief Tablet-Orange ",
+      Bestprice: 19,
+      MRP: 21,
+    },
+    {
+      image_url:
+        "https://www.netmeds.com/images/product-v1/150x150/110947/tetmosol_medicated_soap_100_gm_37098_0_2.jpg ",
+      name: " Tetmosol Medicated soap 100gm ",
+      Bestprice: 83,
+      MRP: 95,
+    },
+    {
+      image_url:
+        "https://www.netmeds.com/images/product-v1/150x150/113653/revital_h_capsule_60s_37254_0_1.jpg",
+      name: "Revital H capsule 60 s",
+      Bestprice: 1019,
+      MRP: 1699,
+    },
+    {
+      image_url:
+        "https://www.netmeds.com/images/product-v1/150x150/100376/horlicks_health_drink_powder_classic_malt_500_gm_refill_pack_0_1.jpg",
+      name: "Horlicks classic Malt  ",
+      Bestprice: 268,
+      MRP: 300,
+    },
+    {
+      image_url:
+        "https://www.netmeds.com/images/product-v1/150x150/411503/nicotex_2mg_chew_gum_mint_plus_flavour_9_s_0.jpg ",
+      name: " Nicotex 2mg Chew Gum",
+      Bestprice: 90,
+      MRP: 101,
+    },
+    {
+      image_url:
+        " https://www.netmeds.com/images/product-v1/150x150/405871/diataal_d_capsule_10s_48662_0_1.jpg ",
+      name: "  Diataal D Capsule 10s ",
+      Bestprice: 80,
+      MRP: 105,
+    },
+    ];
+  //   localStorage.setItem("product",JSON.stringify(data))
+  //  var data=JSON.parse(localStorage.getItem("product"))||[];
+  function filterdata(){
+    var set=document.getElementById("sortname").value
+    console.log(set);
+    if(set==="descending"){
+      mensData.sort(function(a,b){
+        if(a.name>b.name) return 1;
+        if(a.name<b.name) return -1;
+        return 0;
+        //return a.name-b.name
+      });
+      displaydata(mensData)
+    }
+    if(set==="ascending"){
+      mensData.sort(function(a,b){
+        if(a.name<b.name) return 1;
+        if(a.name>b.name) return -1;
+        return 0;
+        //return b.name-a.name 
+   });
+   displaydata(mensData)
+  }
+}
+displaydata(mensData);
+function displaydata(data){
+  document.getElementById("parent").innerHTML="";
+mensData.map(function(elem){
+var div=document.createElement("div");
+var image=document.createElement("img");
+image.setAttribute("src",elem.image_url);
+image.setAttribute("alt",elem.name);
+var name=document.createElement("h4");
+name.textContent=elem.name;
+
+var pricebox=document.createElement("div");
+
+var price=document.createElement("p")
+price.textContent="MRP-"+elem.MRP;
+
+var Mrp=document.createElement("p")
+Mrp.textContent="Bestprice-"+elem.Bestprice;
+
+pricebox.append(price,Mrp);
+//pricebox.append(Price);
+
+var btn=document.createElement("button")
+btn.textContent="Add to cart";
+
+btn.addEventListener("click",function(){
+  addcart(elem);
+});
+div.append(image,name,pricebox,btn);
+document.getElementById("parent").append(div);
+});
+}
+
+
+//data.push(mensData)
+//console.log(data)
+
+
+
+
+// var cartarr=JSON.parse(localStorage.getItem("CART"))||[];
+// function addcart(elem){
+//  console.log(elem); 
+//  cartarr.push(elem)
+//  localStorage.setItem("CART",JSON.stringify(cartarr));
+// }
+
+//data=JSON.parse(localStorage.getItem("product"))||[];
+//displaydata(data);
+
+// function filterdata(){
+//     var set=document.getElementById("sortname").value
+//     console.log(set);
+//     if(set==="descending"){
+//       mensData.sort(function(a,b){
+//         // if(a.name>b.name) return 1;
+//         // if(a.name<b.name) return -1;
+//         // return 0;
+//         return a.name-b.name
+//       });
+//       displaydata(mensData)
+//     }
+//     if(set==="ascending"){
+//       mensData.sort(function(a,b){
+//         return b.name-a.name 
+//    });
+//    displaydata(mensData)
+//   }
+ 
+
+</script>
