@@ -142,9 +142,9 @@ document.getElementById("verify-btn").addEventListener("click", detailstore)
 var detail = JSON.parse(localStorage.getItem("detaillist")) || [];
 function detailstore(){
 
-var email = document.getElementById("email-input").value;
-var name = document.getElementById("name").value;
-var lastname = document.getElementById("lastname").value;
+var email = document.getElementById("email-input").value
+var name = document.getElementById("name").value
+var lastname = document.getElementById("lastname").value
 
 
 var detailobject = {
@@ -157,6 +157,7 @@ var detailobject = {
  detail.push(detailobject);
  localStorage.setItem("detaillist",JSON.stringify(detail));
 console.log(detail);
+
 }
     </script>
 </html>
