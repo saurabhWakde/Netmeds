@@ -46,12 +46,12 @@
                     <br>
                 <label for="">NAME</label>
                 <br>
-                <input type="text" placeholder="Enter your name" />
+                <input type="text" id="name" placeholder="Enter your name" />
                 <br>
                 <br>
                 <label for=""> LAST NAME</label>
                 <br>
-                <input type="text" placeholder="Enter your last name" />
+                <input type="text" id="lastname" placeholder="Enter your last name" />
             </div>
           <div id="number_show">
             <h5>
@@ -137,6 +137,26 @@ function displaynumber(data) {
   });
 }
 
- 
+document.getElementById("verify-btn").addEventListener("click", detailstore)
+
+var detail = JSON.parse(localStorage.getItem("detaillist")) || [];
+function detailstore(){
+
+var email = document.getElementById("email-input").value;
+var name = document.getElementById("name").value;
+var lastname = document.getElementById("lastname").value;
+
+
+var detailobject = {
+   email : email,
+   name : name,
+   lastname : lastname
+}
+
+
+ detail.push(detailobject);
+ localStorage.setItem("detaillist",JSON.stringify(detail));
+console.log(detail);
+}
     </script>
 </html>
