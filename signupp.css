@@ -200,10 +200,13 @@ button > a{
 } */
 #navbar{
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: center;
+     width: 70%;
+     margin: auto;
     align-items: center;
    background-color:#32AEB1 ;
-   gap:50px;
+   gap:140px;
    height:10vh;
 }
 #navhead
@@ -243,7 +246,7 @@ button > a{
     border: none;
     font-size: 10px;
     font-weight: 400;
-  width:200px;
+  width:300px;
 }
 #bar>input:nth-child(2){
     font-weight: 400;
@@ -307,4 +310,8 @@ button > a{
 form{
     display: none;
 }
+}
+#navbigbox
+{
+background-color: #24aeb1;
 }

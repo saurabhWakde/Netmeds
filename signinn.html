@@ -17,7 +17,7 @@
         <i class="fa-solid fa-angle-down fa-1x" style="color: #6d7583;"></i>
         <p style="color: #6d7583">|</p>
         <input  placeholder="Search for medicine and wellness products.." type="text" name="" id="">
-        <button id="search" type="submit"><i class="fa-solid fa-magnifying-glass-plus fa-2x" style="color:#2874F0;"></i></button>
+        <!-- <button id="search" type="submit"><i class="fa-solid fa-magnifying-glass-plus fa-2x" style="color:#2874F0;"></i></button> -->
     </div>
     
     <div>
@@ -57,8 +57,8 @@
             <h5>
               VERIFYING NUMBER</h5>
               <div >
-                <p>We have sent 6 digit OTP on 91+  <b>9802705402</b>  </p>
-                <a href="/Netmeds/signupp.html" >change</a>
+                <p>We have sent 6 digit OTP on 91+  <p id="getnumber"></p>  </p>
+                <a href="./signupp.html" >change</a>
               </div>
             
           </div>
@@ -124,8 +124,19 @@ verifyBtn.addEventListener('click', () => {
   if (otpValue === '') {
     alert('Please enter the OTP');
   }
+  else{
+    window.location.href = "./index.html";
+  }
 });
 
-    
+var numshow = JSON.parse(localStorage.getItem("numberinput")) || [];
+displaynumber(numshow);
+function displaynumber(data) {
+  data.map(elem => {
+    document.getElementById("getnumber").textContent = elem.number;
+  });
+}
+
+ 
     </script>
 </html>
