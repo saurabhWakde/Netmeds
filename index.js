@@ -290,92 +290,176 @@ BrandnextBtn.addEventListener('click', () => {
 });
 
 
-var Productarr=[{
-  image_url:"https://www.netmeds.com/images/product-v1/150x150/357753/d_protin_chocolate_powder_500_gm_0.jpg",
-  ProductName:"Dabur",
-  Price:599,
-  MRP:800,
-  OFF:"60%off"
-}]
-// Productarr.map(function(Elem,Index)
+// var Productarr=[{
+//   image_url:"https://www.netmeds.com/images/product-v1/150x150/357753/d_protin_chocolate_powder_500_gm_0.jpg",
+//   ProductName:"Dabur",
+//   Price:599,
+//   MRP:800,
+//   OFF:"60%off"
+// },
 // {
-//   var Supimg=document.createElement("img");
-//   Supimg.setAttribute("src",Elem.image_url);
-//   var Name=document.createElement('a');
-//   Name.textContent=Elem.ProductName;
-//   var price=document.createElement('p');
-//   price.textContent=Elme.Price;
-//   var Mrp=document.createElement("span");
-//   Mrp.textContent=Elem.MRP;
-//   var Off=document.createElement("h1");
-//   Off.textContent=Elem.OFF;
-//   var Button=document.createElement("button");
-//   Button.textContent="Add To ";
-// document.getElementsByClassName("Supproduct")[0].append(Supimg,Name,price,Mrp,Off,Button);
-// })
+//   image_url:"https://www.netmeds.com/images/product-v1/150x150/357753/d_protin_chocolate_powder_500_gm_0.jpg",
+//   ProductName:"Dabur",
+//   Price:599,
+//   MRP:800,
+//   OFF:"60%off"
+// },{
+//   image_url:"https://www.netmeds.com/images/product-v1/150x150/357753/d_protin_chocolate_powder_500_gm_0.jpg",
+//   ProductName:"Dabur",
+//   Price:599,
+//   MRP:800,
+//   OFF:"60%off"
+// },
+// {
+//   image_url:"https://www.netmeds.com/images/product-v1/150x150/357753/d_protin_chocolate_powder_500_gm_0.jpg",
+//   ProductName:"Dabur",
+//   Price:599,
+//   MRP:800,
+//   OFF:"60%off"
+// }
+// ,{
+//   image_url:"https://www.netmeds.com/images/product-v1/150x150/357753/d_protin_chocolate_powder_500_gm_0.jpg",
+//   ProductName:"Dabur",
+//   Price:599,
+//   MRP:800,
+//   OFF:"60%off"
+// }]
 
-// Productarr.forEach(function(Elem, Index) {
-//   var Supimg = document.createElement("img");
-//   Supimg.setAttribute("src", Elem.image_url);
+// var arr = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-//   var Name = document.createElement('a');
-//   Name.textContent = Elem.ProductName;
+// var buttons = document.querySelectorAll("button");
+// for (var i = 0; i < buttons.length; i++) {
+//   buttons[i].addEventListener("click", function() {
+//     var obj = {
+//       image_url: this.parentElement.querySelector("#supimg").getAttribute("src"),
+//       Name: this.parentElement.querySelector("#supname").textContent,
+//       Price: this.parentElement.querySelector("#supprice").textContent,
+//       MRP: this.parentElement.querySelector("#supmrp").textContent,
+//       Off: this.parentElement.querySelector("#supoff").textContent,
+//       quantity: 1
+//     }
+//     buttons[i].textContent="Added To Cart"
+//     var found = arr.find(item => item.Name === obj.Name);
+//     if (found) {
+//       found.quantity++;
+//       console.log("Added to cart: ", found)
+//        this.textContent = "Added To Cart";
+//     } else {
+//       arr.push(obj);
+//       console.log("Added to cart: ", obj);
+//     }
 
-//   var price = document.createElement('p');
-//   price.style.display = "inline-block";
-//   price.textContent = "₹" + Elem.Price;
+//     localStorage.setItem("cartItems", JSON.stringify(arr))
+
+//     console.log("Data added to local storage: ", localStorage.getItem("cartItems"));
+//   });
+// }
+// Retrieve cart items from local storage
+// var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+// // Loop through the buttons
+// var buttons = document.querySelectorAll("#Btn");
+// this.innerHTML="";
+// for (var i = 0; i < buttons.length; i++) {
+//   var button = buttons[i];
   
-//   var Mrp = document.createElement("span");
-//   Mrp.style.display = "inline-block";
-//   Mrp.textContent ="₹"+Elem.MRP;
+//   // Get the product name
+//   var productName = button.parentNode.querySelector("#supname").textContent;
   
-//   price.appendChild(Mrp);
+//   // Check if the product is in the cart
+//   var cartItem = cartItems.find(item => item.Name === productName);
+//   if (cartItem) {
+//     // Update the button text to show the quantity
+//     button.textContent = "Quantity: " + cartItem.quantity;
+//   }
   
+//   // Add a click event listener to the button
+//   button.addEventListener("click", function() {
+//     // Add the product to the cart
+//     var obj = {
+//       image_url: this.parentNode.querySelector("#supimg").getAttribute("src"),
+//       Name: this.parentNode.querySelector("#supname").textContent,
+//       Price: this.parentNode.querySelector("#supprice").textContent,
+//       MRP: this.parentNode.querySelector("#supmrp").textContent,
+//       Off: this.parentNode.querySelector("#supoff").textContent,
+//       quantity: 1
+//     }
+//     var found = cartItems.find(item => item.Name === obj.Name);
+//     if (found) {
+//       found.quantity++;
+//     } else {
+//       cartItems.push(obj);
+//     }
+    
+//     // Update the button text to show the quantity
+//     this.textContent = "Quantity: " + obj.quantity;
+    
+//     // Save the cart items to local storage
+//     localStorage.setItem("cartItems", JSON.stringify(cartItems));
+//   });
+// }
+// Retrieve cart items from local storage
+var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-//   var Off = document.createElement("h1");
-//   Off.textContent ="₹"+Elem.OFF;
-
-//   var Button = document.createElement("button");
-//   Button.textContent = "Add To Cart";
-
-//   var container = document.getElementsByClassName("Supproduct")[0];
-//   container.appendChild(Supimg);
-//   container.appendChild(Name);
-//   container.appendChild(price);
-//   container.appendChild(Mrp);
-//   container.appendChild(Off);
-//   container.appendChild(Button);
-// });
-// Productarr.forEach(function(Elem, Index) {
-//   var Supimg = document.createElement("img");
-//   Supimg.setAttribute("src", Elem.image_url);
-
-//   var Name = document.createElement('a');
-//   Name.textContent = Elem.ProductName;
-
-//   var price = document.createElement('p');
-//   price.style.display = "inline-block";
-//   price.textContent = "₹" + Elem.Price;
+// Loop through the buttons
+var buttons = document.querySelectorAll("#Btn");
+for (var i = 0; i < buttons.length; i++) {
+  var button = buttons[i];
   
-//   var Mrp = document.createElement("span");
-//   Mrp.style.display = "inline-block";
-//   Mrp.textContent ="₹"+Elem.MRP;
+  // Get the product name
+  var productName = button.parentNode.querySelector("#supname").textContent;
   
-//   price.appendChild(Mrp);
+  // Check if the product is in the cart
+  var cartItem = cartItems.find(item => item.Name === productName);
+  if (cartItem) {
+    // Update the button text to show the quantity
+    button.textContent = "Quantity: " + cartItem.quantity;
+  }
+  
+  // Add a click event listener to the button
+  button.addEventListener("click", function() {
+    // Add the product to the cart
+    var obj = {
+      image_url: this.parentNode.querySelector("#supimg").getAttribute("src"),
+      Name: this.parentNode.querySelector("#supname").textContent,
+      Price: this.parentNode.querySelector("#supprice").textContent,
+      MRP: this.parentNode.querySelector("#supmrp").textContent,
+      Off: this.parentNode.querySelector("#supoff").textContent,
+      quantity: 1
+     
+    }
+    var found = cartItems.find(item => item.Name === obj.Name);
+    if (found) {
+      found.quantity++;
+      // Update the button text to show the quantity
+      this.textContent = "Quantity: " + found.quantity;
+    } else {
+      cartItems.push(obj);
+      // Update the button text to show the quantity
+      this.textContent = "Quantity: 1";
+    }
+    // Save the cart items to local storage
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  });
+}
 
-//   var Off = document.createElement("h1");
-//   Off.textContent = Elem.OFF + " off";
 
-//   var Button = document.createElement("button");
-//   Button.textContent = "Add To Cart";
 
-//   var container = document.getElementsByClassName("Supproduct")[0];
-//   container.appendChild(Supimg);
-//   container.appendChild(Name);
-//   container.appendChild(price);
-//   container.appendChild(Off);
-//   container.appendChild(Button);
-// });
+
+
+
+console.log(arr)
+
+
+
+const accordion =document.getElementsByClassName('contentbox');
+for(i=0;i<accordion.length;i++)
+{
+  accordion[i].addEventListener('click',function()
+  {
+   this.classList.toggle('active');
+  })
+}
 
 
 

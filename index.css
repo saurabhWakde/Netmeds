@@ -6,6 +6,22 @@
    gap:50px;
    height:10vh;
 }
+#navbar input:focus{
+    outline: none;
+}
+#navbar a{
+    color: #fff;
+}
+#bar> select {
+    width: 50%;
+    height: 50px;
+    border: 0px;
+    border-radius: 10px;
+font-size: 10px;
+font-weight: 400;
+line-height: 22px;
+color: rgba(11, 18, 25, 0.5)
+  }
 #navhead
 {
     display: flex;
@@ -25,6 +41,7 @@
      align-items: center;
     gap:5px;
 }
+
 #dropdown{
  display:flex;
  flex-direction:column;
@@ -454,7 +471,7 @@ input[type="Tradio"] {
     background-color:#7CCED0;
    width:90%;
    margin: auto;
-   height: 63vh;
+   height: 64vh;
    margin-bottom: 30px;
 }
 #Hurry >div{
@@ -507,6 +524,13 @@ margin-right: -30px;
   height:25vh;
   margin-bottom:-10px;;
   
+  }
+  .product> div
+  {
+   display: flex;
+   align-items: center;
+   margin: 0;
+   padding: 0%;
   }
   
   .prev-btn, .next-btn {
@@ -765,6 +789,13 @@ margin-right: -30px;
   margin:-15px 40px 40px 10px;;
   
    }
+   .Hproduct> div
+   {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0%;
+   }
 #sup{
     background-color:#7CCED0;
    width:90%;
@@ -776,13 +807,17 @@ margin-right: -30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color:white;
     padding-left: 20px;
+    color: #fff;
 }
 #sup >div>a{
     color:white;;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px; color: rgb(11, 18, 25);
+
 }
-#sup>div >img{
+/* #sup>div >img{
    border:10px ;
    overflow: hidden;
   outline: none;
@@ -790,7 +825,7 @@ margin-right: -30px;
 border-radius: 50px;;
 height: 40.5vh;
 margin-right: -30px;
-}
+} */
 #sup .Supslider-container {
     width:100%;
     position: relative;
@@ -817,7 +852,7 @@ margin-right: -30px;
     cursor: pointer;
   }
   
-  .Supproduct img {
+ #supimg {
   width:100%;
   height:30vh;
   margin-bottom:-10px;;
@@ -859,7 +894,14 @@ margin-right: -30px;
       background-color: #FFFFFF;
       width:18%;
    }
-   .Supproduct button{
+   .Supproduct> div
+   {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0%;
+   }
+ #Btn{
       border: none;;
       display: flex;
      /* padding: 1% 8% 1% 10%; */
@@ -875,42 +917,42 @@ margin-right: -30px;
    justify-content: center;
    align-items: center;
    margin: auto;
+   padding: 8px;
   }
-  .Supproduct button:hover {
-      background-color: #0428dc;
-    }
-   .Supproduct a{
+  #supname{
       text-align: left;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: rgb(11, 18, 25);
   text-decoration: none;
+  padding: 0;
   padding-left: 10px;
   letter-spacing: normal;
    }
-   .Supproduct span{
+ #supmrp{
       text-decoration: line-through;
       text-align: left;
       color: rgb(185, 185, 185);
       font-size: 10px;
   font-weight: 400;
   line-height:14px;
-  margin-left:10px;
+  margin-left:3px;
+margin-top: 14px;
   letter-spacing: normal;
+ }
   
-     
-   }
-   .Supproduct> p{
+      #supprice{
       text-align: left;
       font-size: 14px;
   font-weight: 400;
   line-height:20px;
-  margin-left: 10px;gap: 50px;;
+  margin-left:10px;
   letter-spacing: normal;
-  color: rgb(11, 18, 25);
-   }
-  .Supproduct > h1{
+  color: rgb(25, 11, 11);
+  display: inline-block;
+   } #supoff{
+     padding-top: 10px;
      text-align: left;
   font-size: 14px;
   font-weight: 400;
@@ -929,6 +971,7 @@ margin-right: -30px;
    #Shopby>div{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-left: 20px;
 }
 #Shopby>div>a{
@@ -984,6 +1027,14 @@ margin-right: -30px;
     color:white;
     padding-left: 20px;
 }
+.Bestproduct> div
+{
+ display: flex;
+ align-items: center;
+ margin: 0;
+ padding: 0%;
+}
+
 #Best >div>a{
     color:white;;
 }
@@ -1507,8 +1558,8 @@ margin-bottom: 50px;;
             margin: auto;
             justify-content: space-between;
             padding: 3px;
-           border-top: rgb(115, 116, 124) solid 1px;
-           border-bottom: rgb(115, 116, 124) solid 1px;
+           border-top: rgb(115, 116, 124,0.9) solid 1px;
+           border-bottom: rgb(115, 116, 124,0.9) solid 1px;
             margin-bottom: 20px;
             height: 16vh
             
@@ -1542,3 +1593,137 @@ margin-bottom: 50px;;
                 line-height:16px;
                 color:rgb(239, 66, 129);
                  }
+.paragraph{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    font-family: MyFont, sans-serif;
+    border-bottom:  rgb(115, 116, 124,0.5) solid 1px;
+}
+.accordion{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+
+
+}
+.accordion h2{
+    font-size: 16px;
+    font-weight: 500;
+    
+    line-height: 19.2px;
+    
+     color: rgb(11, 18, 25);
+
+}
+.accordion li{
+    font-size: 13px;
+    font-weight: 400;
+    
+    line-height: 19.2px;
+    
+     color: rgb(11, 18, 25);
+
+}
+.accordion p{
+    font-size: 13px;
+    font-weight: 400;
+    
+    line-height: 19.2px;
+    
+     color: rgb(11, 18, 25);
+
+}
+.accordion .contentbox{
+    position:relative;
+    margin:10px 20px;
+}
+.accordion .contentbox .label{
+    position: relative;
+    padding: 10px;
+    
+}
+.accordion .contentbox .label::before{
+  content: "+";
+  position: absolute;
+right: 20px;;
+top: 50%;
+font-size:1.5em;
+transform: translateY(-50%);
+}
+.accordion .contentbox .content{
+    position: relative;
+    overflow: hidden;
+   height: 0;
+   overflow-y: auto;
+}
+.accordion .contentbox.active .content{
+    height:100%;
+   
+}
+.accordion .contentbox.active  .label::before{
+    content: '-';
+}
+.bottom{
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+}
+.liner{
+  display: flex;
+  width: 90%;
+  border-bottom: rgb(115, 116, 124,0.5) solid 1px;
+  margin: auto;
+
+  justify-content: space-evenly;
+   align-items: center;
+
+}
+.liner > div{
+    display: flex;
+  padding: 20px;
+  
+  }
+  .liner > div>img{
+   
+  width: 90px
+  }
+  .liner > div>div>h2{
+  padding-top: 15px;
+font-size: 26px;
+font-weight:400;
+line-height: normal;
+color: rgb(11, 18, 25,0.5);
+margin: 0;
+   }
+   .liner > div>div>p{
+    font-size: 16px;
+    font-weight:400;
+    line-height: normal;
+    color: rgb(11, 18, 25);
+    margin: 0;
+   }
+   .liner1{
+    display: flex;
+    width: 90%;
+    border-bottom: rgb(115, 116, 124,0.5) solid 1px;
+    margin: auto;
+     align-items: center;
+     /* padding: 30px; */
+
+   }
+   .liner1 > div{
+    display: flex;
+    gap:30px;
+    padding: 30px;
+  }
+  .liner1 > div>img{
+    width: 150px;
+  }
+  .liner1 > div>div>p{
+    font-size: 16px;
+    font-weight:400;
+    line-height: 24px;
+    color: rgb(11, 18, 25,0.5);
+    margin: 0;
+   }
