@@ -37,15 +37,15 @@
         }
         #gpay{
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            width: 45%;
+            width: 140%;
             margin: auto;
-            margin-right: 40%;
+            margin-left: 48%;
             margin-top: 2%;
             align-items: center;
             border-radius: 10px;
-            padding-left: 2%;
-            padding-right: 1%;
-            padding-bottom: 1%;
+            padding-left: 3%;
+            padding-right: 3%;
+            padding-bottom: 2%;
         }
         .gpay1{
             color: rgb(46, 189, 246);
@@ -62,9 +62,9 @@
 
         #paytm{
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            width: 45%;
+            width: 44%;
             margin: auto;
-            margin-right: 40%;
+            margin-right: 41%;
             margin-top: 2%;
             align-items: center;
             border-radius: 10px;
@@ -96,9 +96,9 @@
         }
         #ppay{
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            width: 45%;
+            width: 44%;
             margin: auto;
-            margin-right: 40%;
+            margin-right: 41%;
             margin-top: 2%;
             align-items: center;
             border-radius: 10px;
@@ -124,9 +124,9 @@
 
         #simpl{
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            width: 45%;
+            width: 44%;
             margin: auto;
-            margin-right: 40%;
+            margin-right: 41%;
             margin-top: 2%;
             align-items: center;
             border-radius: 10px;
@@ -156,9 +156,9 @@
 
         #cash{
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            width: 45%;
+            width: 44%;
             margin: auto;
-            margin-right: 40%;
+            margin-right: 41%;
             margin-top: 2%;
             align-items: center;
             border-radius: 10px;
@@ -196,9 +196,9 @@
 
         #voucher{
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            width: 45%;
+            width: 44%;
             margin: auto;
-            margin-right: 40%;
+            margin-right: 41%;
             margin-top: 2%;
             align-items: center;
             border-radius: 10px;
@@ -268,6 +268,10 @@
             display: flex;
             gap: 20px;
         }
+        .a2 a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
         #banks{
             display: flex;
             justify-content: space-between;
@@ -277,15 +281,15 @@
         }
         #net{
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            width: 45%;
-            padding-bottom: 1%;
+            width: 140%;
+            padding-bottom: 2%;
             margin: auto;
-            margin-right: 40%;
+            margin-left: 49%;
             margin-top: 2%;
             align-items: center;
             border-radius: 10px;
-            padding-left: 2%;
-            padding-right: 1%;
+            padding-left: 3%;
+            padding-right: 2%;
         }
         #net h4{
             color: rgb(46, 189, 246);
@@ -293,9 +297,9 @@
         }
         #card{
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            width: 45%;
+            width: 44%;
             margin: auto;
-            margin-right: 40%;
+            margin-right: 41%;
             margin-top: 2%;
             align-items: center;
             border-radius: 10px;
@@ -315,8 +319,8 @@
         }
         .b2 p{
             color: rgb(129, 124, 124);
-            padding-top: -20px;
             padding-bottom: 20px;
+            padding-left: 30px;
         }
         .other select{
             width: 98%;
@@ -324,6 +328,31 @@
             border-color: rgb(211, 207, 207);
             border-radius: 8px;
             color: rgb(120, 118, 118);
+        }
+        #major{
+            display: flex;
+        }
+        #major2{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            width: 25%;
+            margin: auto;
+            margin-left: 29%;
+            margin-top: 10px;
+            align-items: center;
+            border-radius: 10px;
+            padding-left: 2%;
+            padding-right: 1%;
+        }
+        #major2 h4{
+            color: rgb(142, 140, 140);
+        }
+        #major2 :nth-child(6){
+            color: rgb(50, 203, 211);
+        }
+        #major2 :nth-child(7){
+            color: rgb(16, 176, 16);
+            background-color: rgb(222, 214, 214);
+            border-radius: 8px;
         }
 
 
@@ -341,14 +370,16 @@
 </div>
 <div class="a2">
     
-    <p>Your Cart</p>
+    <a href=""><p>Your Cart</p></a>
     
-    <p>Order Review</p>
+    <a href=""><p>Order Review</p></a>
 
-    <p>Payment Details</p>
+    <a href=""><p>Payment Details</p></a>
 </div>
    </div>
 
+    <div id="major">
+        <div id="major1">
    <div id="gpay">
     <div class="gpay1">
         <h4>UPI</h4>
@@ -407,6 +438,18 @@
         </select>  
     </div>
    </div>
+</div>
+
+<div id="major2">
+    <h4>PAYMENT DETAILS</h4>
+    <p>MRP Total</p>
+    <p>Additional Discount</p>
+    <p>Total Amount</p>
+    <p>Shipping/Delivery Charges</p>
+    <p>Total Payable</p>
+    <p>Total Savings</p> 
+</div>
+</div>
 
    <div id="paytm">
     <div class="paytm1">
@@ -428,7 +471,7 @@
         <hr>
     </div>
     <div class="b2">
-        <h3><i class="fa fa-light fa-circle-plus fa-xl" style="color: #72a8ca;"></i>>Add New Card</h3>
+        <h3><i class="fa fa-light fa-circle-plus fa-xl" style="color: #72a8ca;"></i> Add New Card</h3>
         <p>Save and pay with your cards</p>
     </div>
    </div>
