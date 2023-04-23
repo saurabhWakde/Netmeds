@@ -153,6 +153,9 @@
             text-align: left;
             padding-left: 65px;
         }
+        .sim3 p{
+            font-size: small;
+        }
 
         #cash{
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -192,6 +195,9 @@
             color: rgb(251, 102, 127);
             border-radius: 10px;
             margin-top: -10px;
+        }
+        .cash3 p{
+            font-size: small;
         }
 
         #voucher{
@@ -261,10 +267,10 @@
 
 
      .a1{
-            color: antiquewhite;
+            color: white;
         }
         .a2{
-            color: antiquewhite;
+            color: white;
             display: flex;
             gap: 20px;
         }
@@ -300,7 +306,7 @@
             width: 44%;
             margin: auto;
             margin-right: 41%;
-            margin-top: 2%;
+            margin-top: 20px;
             align-items: center;
             border-radius: 10px;
             padding-left: 2%;
@@ -331,6 +337,7 @@
         }
         #major{
             display: flex;
+            margin-top: 15px;
         }
         #major2{
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -355,10 +362,80 @@
             border-radius: 8px;
         }
 
-
+        @media only screen and (max-width: 768px) {
+			/* body{
+                width: 500px;
+                margin: 0%;
+            } */
+			#nav{
+                display: none;
+            }
+            .a2{
+                display: none;
+            }
+            #pay{
+                background-color: white;
+                margin: 0%;
+            }
+            .a1 h2{
+                color: black;
+            }
+            #gpay{
+                width: 500px;
+                margin: 0%;
+            }
+            #net{
+                width: 500px;
+                margin: 0%;
+            }
+            .other{
+                display: none;
+            }
+            #major2{
+                display: none;
+            }
+            #card{
+                width: 500px;
+                margin: 0%;
+                margin-top: 20px;
+            }
+            #paytm{
+                width: 500px;
+                margin: 0%;
+            }
+            #ppay{
+                width: 500px;
+                margin: 0%;
+                margin-top: 20px;
+            }
+            #simpl{
+                width: 500px;
+                margin: 0%;
+                margin-top: 20px;
+            }
+            #cash{
+                width: 500px;
+                margin: 0%;
+                margin-top: 20px;
+            }
+            #voucher{
+                width: 500px;
+                margin: 0%;
+                margin-top: 20px;
+            }
+            .round label {
+                    background-color: #fff;
+                    border: 1px solid #0f0e0e;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    height: 18px;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 18px;
+            }
+		}
     </style>
-     
-
 </head>
 <body>
    <div id="nav">
@@ -451,6 +528,17 @@
 </div>
 </div>
 
+   <div id="card">
+    <div class="b1">
+        <h4>CREDIT & DEBIT CARDS</h4>
+        <hr>
+    </div>
+    <div class="b2">
+        <h3><i class="fa fa-light fa-circle-plus fa-xl" style="color: #72a8ca;"></i> Add New Card</h3>
+        <p>Save and pay with your cards</p>
+    </div>
+   </div>
+
    <div id="paytm">
     <div class="paytm1">
         <h4>PREFERED PAYMENT</h4>
@@ -463,17 +551,6 @@
    <div class="paytm3">
     <p>Pay using Paytm wallet to get cashback between Rs. 30 to Rs. 600. Minimum order value: Rs. 999. TCA</p>
 </div>
-   </div>
-
-   <div id="card">
-    <div class="b1">
-        <h4>CREDIT & DEBIT CARDS</h4>
-        <hr>
-    </div>
-    <div class="b2">
-        <h3><i class="fa fa-light fa-circle-plus fa-xl" style="color: #72a8ca;"></i> Add New Card</h3>
-        <p>Save and pay with your cards</p>
-    </div>
    </div>
 
    <div id="ppay">
@@ -499,7 +576,6 @@
     <div class="sim2">
     <a href="https://getsimpl.com/"><img src="https://www.netmeds.com/msassets/images/icons/simpl-logo.png" alt=""></a>
     <p>Simpl</p>
-    
     <div class="container">
         <div class="round">
           <input type="checkbox" checked id="checkbox" />
